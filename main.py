@@ -23,7 +23,7 @@ user_input = st.text_input(label="Enter your password", type="password")
 
 if st.button("Check password!"):
     if user_input:
-        properties = get_password_properties(user_input)
+        properties: dict[str, bool] = get_password_properties(user_input)
 
         for condition, passes in properties.items():
             if passes:
